@@ -1,0 +1,19 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "description": "Name generator for new projects",
+  "main": "projectname.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelperrygoodman/projectname.git"
+  },
+  "author": "Michael Perry Goodman",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/michaelperrygoodman/projectname/issues"
+  },
+  "homepage": "https://github.com/michaelperrygoodman/projectname#readme"
+}
