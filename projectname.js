@@ -15,8 +15,15 @@
 const VERSION = '1.0.0';
 
 // data
-let fname = [''];
-let sname = [''];
+function getFirstNameArray() {
+  let fname = require('./data/adjectives.json');
+  return fname.adjectives;
+}
+
+function getSecondNameArray() {
+  let sname = require('./data/animals.json');
+  return sname.animals;
+}
 
 // banner
 function banner() {
@@ -26,6 +33,8 @@ function banner() {
 
 // generate name
 function generate() {
+  let fname = getFirstNameArray();
+  let sname = getSecondNameArray();
   return fname[Math.floor(Math.random()*fname.length)]+sname[Math.floor(Math.random()*sname.length)];
 }
 
