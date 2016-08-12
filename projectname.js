@@ -16,13 +16,13 @@ const VERSION = '1.0.0';
 
 // data
 function getFirstNameArray() {
-  let fname = require('./data/adjectives.json');
-  return fname.adjectives;
+  let fname = require('./data/firstword.json');
+  return fname.wordlist;
 }
 
 function getSecondNameArray() {
-  let sname = require('./data/animals.json');
-  return sname.animals;
+  let sname = require('./data/secondword.json');
+  return sname.wordlist;
 }
 
 // banner
@@ -35,7 +35,7 @@ function banner() {
 function generate() {
   let fname = getFirstNameArray();
   let sname = getSecondNameArray();
-  return fname[Math.floor(Math.random()*fname.length)]+sname[Math.floor(Math.random()*sname.length)];
+  return fname[Math.floor(Math.random()*fname.length)]+'-'+sname[Math.floor(Math.random()*sname.length)];
 }
 
 // main
@@ -43,5 +43,5 @@ function generate() {
   banner();
 
   let name = generate();
-  console.log('Project: %s\n', name.toUpperCase());
+  console.log('Project: %s\n', name);
 })();
