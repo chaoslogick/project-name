@@ -14,14 +14,16 @@
 // constants
 const VERSION = '1.0.0';
 
+// lets
+let fname = require('./data/firstword.json');
+let sname = require('./data/secondword.json');
+
 // data
 function getFirstNameArray() {
-  let fname = require('./data/firstword.json');
   return fname.wordlist;
 }
 
 function getSecondNameArray() {
-  let sname = require('./data/secondword.json');
   return sname.wordlist;
 }
 
