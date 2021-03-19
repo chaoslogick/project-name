@@ -1,2 +1,2 @@
 # project-name.js
-Name generator for new projects (also DIY bands)
+shitty name generator for new projects (also DIY bands)
