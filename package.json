@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelperrygoodman/projectname.git"
+    "url": "git+https://github.com/hyperchaos/projectname.git"
   },
   "author": "Michael Perry Goodman",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/michaelperrygoodman/projectname/issues"
+    "url": "https://github.com/hyperchaos/projectname/issues"
   },
-  "homepage": "https://github.com/michaelperrygoodman/projectname#readme"
+  "homepage": "https://github.com/hyperchaos/projectname#readme"
 }
