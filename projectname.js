@@ -11,37 +11,38 @@
 
 'use strict';
 
-// constants
+let yargs = require('yargs');
+let axios = require('axios');
+
 const VERSION = '1.0.0';
 
-// lets
-let fname = require('./data/firstword.json');
-let sname = require('./data/secondword.json');
+const options = yargs
+ // .usage("Usage: -n <name>")
+ // .option("n", { alias: "name", describe: "Your name", type: "string", demandOption: true })
+ .argv;
 
-// data
-function getFirstNameArray() {
-  return fname.wordlist;
+let wordlist = require('./data/wordlist.json');
+
+function getW0() {
+  console.log(`${wordlist.w0}`);
 }
 
-function getSecondNameArray() {
-  return sname.wordlist;
+function getW1() {
+  return wordlist.w1.split(',');
 }
 
-// banner
 function banner() {
   console.log('\nprojectname.js %s', VERSION);
   console.log('Name generator for new projects\n');
 }
 
-// generate name
 function generate() {
-  let fname = getFirstNameArray();
-  let sname = getSecondNameArray();
-  return fname[Math.floor(Math.random()*fname.length)]+'-'+sname[Math.floor(Math.random()*sname.length)];
+  let w0 = getW0();
+  let w1 = getW1();
+  return `${w0[Math.floor(Math.random()*w0.length)]} - ${w1[Math.floor(Math.random()*w1.length)]}`;
 }
 
-// main
-(function main() {
+(function main(args) {
   banner();
 
   let name = generate();
