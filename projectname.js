@@ -12,7 +12,7 @@
 'use strict';
 
 let yargs = require('yargs');
-let axios = require('axios');
+// let axios = require('axios');
 
 const VERSION = '1.0.0';
 
@@ -24,11 +24,11 @@ const options = yargs
 let wordlist = require('./data/wordlist.json');
 
 function getW0() {
-  console.log(`${wordlist.w0}`);
+  return [...wordlist.w0]
 }
 
 function getW1() {
-  return wordlist.w1.split(',');
+  return [...wordlist.w0]
 }
 
 function banner() {
@@ -39,7 +39,7 @@ function banner() {
 function generate() {
   let w0 = getW0();
   let w1 = getW1();
-  return `${w0[Math.floor(Math.random()*w0.length)]} - ${w1[Math.floor(Math.random()*w1.length)]}`;
+  return `${w0[Math.floor(Math.random()*w0.length)]}-${w1[Math.floor(Math.random()*w1.length)]}`;
 }
 
 (function main(args) {
