@@ -11,17 +11,16 @@
 
 'use strict';
 
-let yargs = require('yargs');
-// let axios = require('axios');
+const yargs = require('yargs');
 
 const VERSION = '1.0.0';
 
-const options = yargs
+const _options = yargs
  // .usage("Usage: -n <name>")
  // .option("n", { alias: "name", describe: "Your name", type: "string", demandOption: true })
  .argv;
 
-let wordlist = require('./data/wordlist.json');
+const wordlist = require('./data/wordlist.json');
 
 function getW0() {
   return [...wordlist.w0]
@@ -37,14 +36,14 @@ function banner() {
 }
 
 function generate() {
-  let w0 = getW0();
-  let w1 = getW1();
+  const w0 = getW0();
+  const w1 = getW1();
   return `${w0[Math.floor(Math.random()*w0.length)]}-${w1[Math.floor(Math.random()*w1.length)]}`;
 }
 
-(function main(args) {
+(function main(_args) {
   banner();
 
-  let name = generate();
+  const name = generate();
   console.log('Project: %s\n', name);
 })();
